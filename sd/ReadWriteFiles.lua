@@ -39,12 +39,15 @@ function Main()
 	local filename2 = "newfile.txt"
 
 	ez.Cls(ez.RGB(0,0,0))
-	WriteFile(filename1)
-	os.rename(filename1, filename2)
-	ReadFile(filename2)
+	WriteFile(filename1) -- Create a file
+	os.rename(filename1, filename2) -- Rename file on the SD card
+	ReadFile(filename2) -- Read a file
 
-	WriteFile(filename1)
-	os.remove(filename2)
+	WriteFile(filename1) -- Create the file again.
+	os.remove(filename2) -- Remove a file from the SD card
+
+	-- Uncomment this line to create a file error (due to reading a non-existing file)
+	-- ReadFile(filename2) -- Read a file
 
 end
 
