@@ -28,8 +28,8 @@ function ReadFile(filename)
 		if t == nil then
 			print("..end of file..")
 		else
+			print(t)
 		end
-		print(t)
 	until t == nil
 	f:close()
 end
